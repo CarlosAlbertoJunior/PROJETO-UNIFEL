@@ -1,6 +1,96 @@
-.product-checkout h2{
 
-    color: #f7fbfc;
+  .cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cart-content {
+    background-color: rgb(10, 10, 10);
+    padding: 40px;
+    border-radius: 8px;
+    border: 2px solid rgb(255, 255, 255);
+    width: 80%;
+    /* Ajuste o tamanho do modal conforme necessário */
+    max-width: 900px;
+    /* Max largura do modal */
+    overflow-y: auto;
+    /* Caso o conteúdo ultrapasse o limite */
+  }
+  .cart-content h2 {
+    background-color: rgba(0, 0, 0, 0.322);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 10px;
+    color: #f0f2f3;
+  }
+  .cart-content p {
+    font-size: 20px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .close-cart {
+    background: red;
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 5px 10px;
+    margin-inline-end: 10px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .cart-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 colunas de largura igual */
+    gap: 20px;  /* Espaçamento entre os itens */
+    margin: 10px;
+    grid-auto-rows: 1fr;
+    
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    background-color: #3333337a;
+    border-radius: 8px;
+    padding: 20px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 95%;
+   box-sizing: border-box;
+    
+  }
+  s
+  .cart-item p {
+    color: white;
+    margin: 0;
+  }
+  
+  .cart-item .quantity {
+    font-size: 1rem;
+  }
+  
+  .cart-item .price {
+    font-size: 1rem;
+    margin-bottom: auto;
+    /* Alinha o preço à direita */
+    color: #f39c12;
+    /* Cor para o preço */
+  }
+  
+  .cart-item .total {
+    font-size: 1rem;
+    margin-left: 10px;
+    font-weight: bold;
   }
 
  

@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { CiShoppingCart } from "react-icons/ci";
-import { useNavigate } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "./Products.css";
+
 
 function Products() {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
     const [showCart, setShowCart] = useState(false); // Estado para controlar a exibição do modal
+    const navigate = useNavigate();
 
     useEffect(() => {
         const getData = async () => {
@@ -38,25 +40,28 @@ function Products() {
         setShowCart(!showCart); // Alterna entre mostrar e esconder o modal
     };
 
-    const navigate = useNavigate();
-
+    const goPage = (id) => {
+        navigate(`/products/${id}`);
+    }
     return (
         <div className="product-h2">
             <h2>PRODUTOS</h2>
             <div className="painel-products">
-                    <button onClick={toggleCart}>
-                        <CiShoppingCart /> {cart.reduce((acc, item) => acc + item.quantity, 0)}
-                    </button>
-                </div>
+                <button onClick={toggleCart}>
+                    <CiShoppingCart /> {cart.reduce((acc, item) => acc + item.quantity, 0)}
+                </button>
+            </div>
             <div className="products-container">
                 {products.map((product) => (
                     <div className="product" key={product.id}>
+                        <button className="button-details" onClick={() => goPage(product.id)}>
                         <p>{product.title}</p>
                         <img width='158.19px' height='270px' src={product.image} alt="" /><br />
+                        </button>
                         <h4>AVALIAÇÕES</h4>
-                    
-                        <p><FaStar />  {product.rating.rate}</p> 
-                        <p>{product.rating.count}</p>
+
+                        <p><FaStar />  {product.rating.rate}</p>
+                        <p>{product.rating.count} ( Votos )</p>
                         <h4>R$ {product.price.toFixed(2)}</h4>
                         <button onClick={() => handLeClick(product)}>Adicionar ao Carrinho</button>
                     </div>

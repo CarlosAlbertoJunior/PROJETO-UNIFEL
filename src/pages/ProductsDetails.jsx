@@ -29,11 +29,10 @@ function ProductsDetails() {
             <h1>DETALHES DO PRODUTO</h1>
             <button className="button-detalhes-voltar" onClick={goBack}>Voltar</button>
             <div className="products-details">
-                <p>CATEGORIA: {product.category}</p>
+                <p>CATEGORIA: <br />{product.category}</p>
                 <p>{product.title}</p>
                 <h2>{product.description}</h2>
                 <img src={product.image} alt="" />
-                <p>R$ {product.price} Reais</p>
             </div>
            
         </div>

@@ -25,9 +25,7 @@
   /* Coloca o conteúdo em coluna */
   justify-content: space-between;
   /* Espaça a imagem e o botão */
-  border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 10px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.322);
   backdrop-filter: blur(10px);
@@ -36,8 +34,11 @@
 }
 .product P {
   font-size: 20px;
-  margin: 5px;
- 
+  margin: 0px;
+}
+.product h4 {
+  margin: 10px;
+  font-size: 25px;
 }
 
 .product img {
@@ -90,8 +91,8 @@
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #f7f7f7;
-  color: rgb(5, 4, 4);
+  background-color: rgba(0, 0, 0, 0.322);
+  color: rgba(0, 0, 0, 0.322);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -128,85 +129,4 @@
   /* Espaço entre a imagem e o botão */
 }
 
-.cart-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.cart-content {
-  background-color: rgb(10, 10, 10);
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  /* Ajuste o tamanho do modal conforme necessário */
-  max-width: 900px;
-  /* Max largura do modal */
-  overflow-y: auto;
-  /* Caso o conteúdo ultrapasse o limite */
-}
-
-.close-cart {
-  background: red;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  float: right;
-}
-
-.cart-items {
-  display: flex;
-  flex-wrap: grid;
-  /* Permite que os itens se quebrem para a linha seguinte se necessário */
-  gap: 30px;
-  /* Espaçamento entre os itens */
-}
-
-.cart-item {
-  display: flex;
-  align-items: center;
-  background-color: #333;
-  border-radius: 8px;
-  padding: 10px;
-  width: 100%;
-  max-width: 300px;
-  /* Ajuste o tamanho dos itens */
-}
-
-.cart-item img {
-  width: 80px;
-  /* Ajuste o tamanho da imagem */
-  height: 120px;
-  /* Ajuste o tamanho da imagem */
-  margin-right: 15px;
-}
-
-.cart-item p {
-  color: white;
-  margin: 0;
-}
-
-.cart-item .quantity {
-  font-size: 1rem;
-}
-
-.cart-item .price {
-  font-size: 1rem;
-  margin-left: auto;
-  /* Alinha o preço à direita */
-  color: #f39c12;
-  /* Cor para o preço */
-}
-
-.cart-item .total {
-  font-size: 1rem;
-  margin-left: 10px;
-  font-weight: bold;
-}
