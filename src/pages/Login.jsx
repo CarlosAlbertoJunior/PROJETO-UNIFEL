@@ -26,11 +26,14 @@ function Login() {
                 <div>
                     <input onChange={(event) => setEmail(event.target.value)} type="email" />
                     <FaUser className="icon" />
+                    <h4>E-mail</h4>
                 </div>
                 <div>
                     <input onChange={(event) => setPassword(event.target.value)} type="password" />
                     <FaLock className="icon" />
+                    <h4>Senha</h4>
                 </div>
+                <br />
                 <button onClick={handleClick}>Entrar</button>
                 <br /><br />
                 <Link to='/products' >Entrar via Link</Link>

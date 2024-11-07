@@ -1,149 +1,212 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    background-color:rgb(0, 0, 0);
-    
-    text-align: center;
-    min-height: 100vh;
-    background-image: url("");
-    background-size: cover; /* Mantém a proporção da imagem */
-    background-position: center;
-    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
-  }
-  .containe {
-    position: fixed; /* Torna o painel fixo */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o painel */
-    width: 300px;
-    background-color: rgba(241, 234, 234, 0.14);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    padding: 40px;
-    border-radius: 10px;
-  }
-  /*---------------------------------------------------------------------------------------------------------*/
-
 .painel-products {
-    border: 2px solid rgba(255, 255, 255, 0.2);
-  }
+  border: 2px solid rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+
+.painel-products button {
+  border: 2px solid rgb(255, 255, 255);
+  font-size: 20px;
+  margin: 5px;
+  padding-bottom: 10px;
+}
 
 .products-container {
-    display: grid; /* Use grid para criar a grade */
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual */
-    gap: 20px; /* Espaçamento entre os itens */
-  }
-  .product {
-    display: flex;
-    flex-direction: column; /* Coloca o conteúdo em coluna */
-    justify-content: space-between; /* Espaça a imagem e o botão */
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.14);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    padding: 40px;
-  }
-  .product img {
-    width: 100%;
-    height: 100%x;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease; /* Animação suave no hover */
-  }
-  .product-image {
-    width: 100%; /* Ajusta a imagem para ocupar toda a largura */
-    height: 150px; /* Altura fixa para a imagem */
-    object-fit: contain; /* Ajusta a imagem para mostrar todo o conteúdo */
-    border-radius: 8px; /* Opcional: arredonda as bordas */
-    transition: transform 0.3s ease;
-  }
-  .product-h2 h2 {
-    background-color: rgba(255, 255, 255, 0.14);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    padding: 40px;
-    border-radius: 10px;
-    color: #f0f2f3;
-  }
+  display: grid;
+  /* Use grid para criar a grade */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 colunas de largura igual */
+  gap: 20px;
+  /* Espaçamento entre os itens */
+}
 
-  .CiStar {
-    color: #e3f307;
-  }
-  
-  .product .button-details:hover {
-    transform: scale(1.05); /* Leve aumento da imagem no hover */
-  }
-  .button-add-cart:hover {
-    background-color: #054405; /* Escolha a cor desejada */
-  }
-  .button-details { /*Quadrado de selecionar o item para detalhes */
-    margin-top: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f7f7f7;
-    color: rgb(5, 4, 4);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  .button-sair {
-    margin-top: 20px; 
-    padding: 30px 80px;
-    font-size: 30px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: rgb(5, 5, 5);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  
-  }
-  
-  .button-add-cart {
-    position: absolute; /* Fixa o botão na parte inferior do contêiner */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 0 0 8px 8px; /* Apenas os cantos inferiores arredondados */
-    background-color: #000000;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 10px; /* Espaço entre a imagem e o botão */
-  }
-  .cart-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.product {
+  display: flex;
+  flex-direction: column;
+  /* Coloca o conteúdo em coluna */
+  justify-content: space-between;
+  /* Espaça a imagem e o botão */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.322);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgb(255, 255, 255);
+  padding: 40px;
+}
+.product P {
+  font-size: 20px;
+  margin: 5px;
+ 
+}
+
+.product img {
+  width: 100%;
+  height: 100%x;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  /* Animação suave no hover */
+}
+
+.product-image {
+  width: 100%;
+  /* Ajusta a imagem para ocupar toda a largura */
+  height: 150px;
+  /* Altura fixa para a imagem */
+  object-fit: contain;
+  /* Ajusta a imagem para mostrar todo o conteúdo */
+  border-radius: 8px;
+  /* Opcional: arredonda as bordas */
+  transition: transform 0.3s ease;
+}
+
+.product-h2 h2 {
+  background-color: rgba(0, 0, 0, 0.322);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 10px;
+  color: #f0f2f3;
+}
+
+.CiStar {
+  color: #e3f307;
+}
+
+.product .button-details:hover {
+  transform: scale(1.05);
+  /* Leve aumento da imagem no hover */
+}
+
+.button-add-cart:hover {
+  background-color: #054405;
+  /* Escolha a cor desejada */
+}
+
+.button-details {
+  /*Quadrado de selecionar o item para detalhes */
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  color: rgb(5, 4, 4);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-sair {
+  margin-top: 20px;
+  padding: 30px 80px;
+  font-size: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: rgb(5, 5, 5);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+.button-add-cart {
+  position: absolute;
+  /* Fixa o botão na parte inferior do contêiner */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  /* Apenas os cantos inferiores arredondados */
+  background-color: #000000;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+  /* Espaço entre a imagem e o botão */
+}
+
+.cart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cart-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 400px;
-    max-width: 90%;
+  background-color: rgb(10, 10, 10);
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  /* Ajuste o tamanho do modal conforme necessário */
+  max-width: 900px;
+  /* Max largura do modal */
+  overflow-y: auto;
+  /* Caso o conteúdo ultrapasse o limite */
 }
 
 .close-cart {
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    float: right;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  float: right;
+}
+
+.cart-items {
+  display: flex;
+  flex-wrap: grid;
+  /* Permite que os itens se quebrem para a linha seguinte se necessário */
+  gap: 30px;
+  /* Espaçamento entre os itens */
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  /* Ajuste o tamanho dos itens */
+}
+
+.cart-item img {
+  width: 80px;
+  /* Ajuste o tamanho da imagem */
+  height: 120px;
+  /* Ajuste o tamanho da imagem */
+  margin-right: 15px;
+}
+
+.cart-item p {
+  color: white;
+  margin: 0;
+}
+
+.cart-item .quantity {
+  font-size: 1rem;
+}
+
+.cart-item .price {
+  font-size: 1rem;
+  margin-left: auto;
+  /* Alinha o preço à direita */
+  color: #f39c12;
+  /* Cor para o preço */
+}
+
+.cart-item .total {
+  font-size: 1rem;
+  margin-left: 10px;
+  font-weight: bold;
 }

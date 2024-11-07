@@ -5,25 +5,29 @@ body {
   margin: 0;
   text-align: center;
   min-height: 100vh;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(7, 31, 51);
   background-image: url(assets/person-using-futuristic-virtual-reality-headset-video-games.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-
+/* -------------------------------------------------------------------------------------------------------------*/
 .containe {
   position: fixed; /* Mantém o painel fixo no centro da tela */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Centraliza o painel */
   width: 300px;
-  background-color: rgba(241, 234, 234, 0.14);
+  background-color:rgb(8, 8, 8);
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgb(255, 255, 255);
   padding: 40px;
   border-radius: 10px;
   z-index: 10; /* Garante que o painel esteja na frente de outros elementos */
+}
+h4 {
+  font-size: 15px;
+  margin:0;
 }
 
 a {
