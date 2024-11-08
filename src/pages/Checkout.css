@@ -141,3 +141,43 @@
     padding: 10px 5px; /* Menor padding para caber em telas pequenas */
   }
 }
+/* Botão do carrinho flutuante */
+.cart-button {
+  position: fixed;
+  bottom: 20px;  /* Distância da parte inferior da tela */
+  right: 20px;   /* Distância da parte direita da tela */
+  background-color: #28a745; /* Cor do fundo do botão */
+  color: white; /* Cor do texto */
+  border: none;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 50%;  /* Deixa o botão redondo */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;  /* Garante que o botão fique acima de outros elementos */
+}
+
+.cart-button:hover {
+  background-color: #218838; /* Cor de fundo quando o botão é clicado */
+  transform: scale(1.1); /* Aumenta ligeiramente o botão */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .cart-button {
+    bottom: 15px;  /* Ajusta a distância inferior para telas menores */
+    right: 15px;   /* Ajusta a distância direita para telas menores */
+    padding: 12px 22px; /* Ajusta o tamanho do botão */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-button {
+    bottom: 10px;  /* Ajusta a distância inferior para telas muito pequenas */
+    right: 10px;   /* Ajusta a distância direita para telas muito pequenas */
+    padding: 10px 20px; /* Ajusta ainda mais o tamanho do botão */
+    font-size: 14px; /* Ajusta o tamanho da fonte para telas muito pequenas */
+  }
+}
