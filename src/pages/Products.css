@@ -12,11 +12,8 @@
 
 .products-container {
   display: grid;
-  /* Use grid para criar a grade */
   grid-template-columns: repeat(4, 1fr);
-  /* 4 colunas de largura igual */
   gap: 20px;
-  /* Espaçamento entre os itens */
 }
 
 .product {
@@ -32,10 +29,12 @@
   border: 2px solid rgb(255, 255, 255);
   padding: 40px;
 }
+
 .product P {
   font-size: 20px;
   margin: 0px;
 }
+
 .product h4 {
   margin: 10px;
   font-size: 25px;
@@ -128,5 +127,3 @@
   margin-top: 10px;
   /* Espaço entre a imagem e o botão */
 }
-
-

@@ -1,97 +1,94 @@
+.cart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .cart-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .cart-content {
-    background-color: rgb(10, 10, 10);
-    padding: 40px;
-    border-radius: 8px;
-    border: 2px solid rgb(255, 255, 255);
-    width: 80%;
-    /* Ajuste o tamanho do modal conforme necessário */
-    max-width: 900px;
-    /* Max largura do modal */
-    overflow-y: auto;
-    /* Caso o conteúdo ultrapasse o limite */
-  }
-  .cart-content h2 {
-    background-color: rgba(0, 0, 0, 0.322);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgb(255, 255, 255);
-    padding: 40px;
-    border-radius: 10px;
-    color: #f0f2f3;
-  }
-  .cart-content p {
-    font-size: 20px;
-    border: 2px solid rgb(255, 255, 255);
-    padding: 5px;
-    text-align: center;
-  }
-  
-  .close-cart {
-    background: red;
-    color: white;
-    border: 2px solid rgb(255, 255, 255);
-    padding: 5px 10px;
-    margin-inline-end: 10px;
-    cursor: pointer;
-    float: right;
-  }
-  
-  .cart-items {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);  /* 4 colunas de largura igual */
-    gap: 20px;  /* Espaçamento entre os itens */
-    margin: 10px;
-    grid-auto-rows: 1fr;
-    
-  }
-  
-  .cart-item {
-    display: flex;
-    align-items: center;
-    background-color: #3333337a;
-    border-radius: 8px;
-    padding: 20px;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 95%;
-   box-sizing: border-box;
-    
-  }
-  s
-  .cart-item p {
-    color: white;
-    margin: 0;
-  }
-  
-  .cart-item .quantity {
-    font-size: 1rem;
-  }
-  
-  .cart-item .price {
-    font-size: 1rem;
-    margin-bottom: auto;
-    /* Alinha o preço à direita */
-    color: #f39c12;
-    /* Cor para o preço */
-  }
-  
-  .cart-item .total {
-    font-size: 1rem;
-    margin-left: 10px;
-    font-weight: bold;
-  }
+.cart-content {
+  background-color: rgb(10, 10, 10);
+  padding: 40px;
+  border-radius: 8px;
+  border: 2px solid rgb(255, 255, 255);
+  width: 80%;
+  max-width: 900px;
+  overflow-y: auto;
+}
 
- 
+.cart-content h2 {
+  background-color: rgba(0, 0, 0, 0.322);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  color: #f0f2f3;
+  text-align: center;
+}
 
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 0.5fr; /* 5 colunas agora (nome, quantidade, preço, total e remover) */
+  gap: 10px;
+  align-items: center;
+  background-color: #3333337a;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+}
+
+.cart-item p {
+  margin: 0;
+  text-align: center;
+}
+
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.price, .total {
+  font-size: 1rem;
+  color: #f39c12;
+}
+
+.remove-item {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.cart-total {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-align: right;
+}
+
+.finalize-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
