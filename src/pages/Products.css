@@ -19,9 +19,7 @@
 .product {
   display: flex;
   flex-direction: column;
-  /* Coloca o conteúdo em coluna */
   justify-content: space-between;
-  /* Espaça a imagem e o botão */
   border-radius: 8px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.322);
@@ -42,22 +40,17 @@
 
 .product img {
   width: 100%;
-  height: 100%x;
+  height: 100%;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  /* Animação suave no hover */
 }
 
 .product-image {
   width: 100%;
-  /* Ajusta a imagem para ocupar toda a largura */
   height: 150px;
-  /* Altura fixa para a imagem */
   object-fit: contain;
-  /* Ajusta a imagem para mostrar todo o conteúdo */
   border-radius: 8px;
-  /* Opcional: arredonda as bordas */
   transition: transform 0.3s ease;
 }
 
@@ -76,16 +69,13 @@
 
 .product .button-details:hover {
   transform: scale(1.05);
-  /* Leve aumento da imagem no hover */
 }
 
 .button-add-cart:hover {
   background-color: #054405;
-  /* Escolha a cor desejada */
 }
 
 .button-details {
-  /*Quadrado de selecionar o item para detalhes */
   margin-top: 20px;
   padding: 10px;
   border: none;
@@ -106,24 +96,79 @@
   color: rgb(5, 5, 5);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-
 }
 
 .button-add-cart {
   position: absolute;
-  /* Fixa o botão na parte inferior do contêiner */
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 10px;
   border: none;
   border-radius: 0 0 8px 8px;
-  /* Apenas os cantos inferiores arredondados */
   background-color: #000000;
   color: white;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   margin-top: 10px;
-  /* Espaço entre a imagem e o botão */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+    gap: 15px;
+  }
+
+  .product {
+    padding: 20px; /* Reduz o padding em telas menores */
+  }
+
+  .product h4 {
+    font-size: 20px; /* Reduz o tamanho da fonte do título */
+  }
+
+  .product P {
+    font-size: 18px; /* Reduz o tamanho do parágrafo */
+  }
+
+  .button-details {
+    font-size: 16px; /* Ajusta o tamanho da fonte do botão */
+  }
+
+  .button-add-cart {
+    font-size: 14px; /* Ajusta o tamanho da fonte do botão de adicionar ao carrinho */
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    grid-template-columns: 1fr; /* Exibe 1 coluna em telas menores */
+    gap: 10px;
+  }
+
+  .product {
+    padding: 10px; /* Reduz ainda mais o padding */
+  }
+
+  .product h4 {
+    font-size: 18px; /* Reduz o tamanho da fonte do título */
+  }
+
+  .product P {
+    font-size: 16px; /* Reduz o tamanho do parágrafo */
+  }
+
+  .button-details {
+    font-size: 14px; /* Ajusta o tamanho da fonte do botão */
+  }
+
+  .button-add-cart {
+    font-size: 12px; /* Ajusta o tamanho da fonte do botão de adicionar ao carrinho */
+  }
+
+  .button-sair {
+    font-size: 20px; /* Ajusta o tamanho da fonte do botão de sair */
+  }
 }

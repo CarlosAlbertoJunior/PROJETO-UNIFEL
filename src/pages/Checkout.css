@@ -92,3 +92,52 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cart-content {
+    width: 90%;  /* Reduz a largura do modal em telas pequenas */
+    padding: 20px; /* Menos padding */
+  }
+
+  .cart-item {
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* Ajusta para 4 colunas em telas pequenas */
+  }
+
+  .cart-item p {
+    font-size: 14px; /* Ajusta o tamanho da fonte para telas pequenas */
+  }
+
+  .remove-item {
+    padding: 5px 8px; /* Menor tamanho para o botão */
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .cart-total {
+    font-size: 1rem; /* Menor tamanho da fonte para o total */
+  }
+
+  .finalize-button {
+    font-size: 1rem; /* Menor tamanho da fonte no botão */
+    padding: 8px; /* Menor padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-item {
+    grid-template-columns: 1fr 1fr; /* Duas colunas em telas muito pequenas */
+  }
+
+  .cart-content {
+    padding: 15px;
+  }
+
+  .cart-item p {
+    font-size: 12px; /* Fontes ainda menores em telas menores */
+  }
+
+  .finalize-button {
+    font-size: 1rem; /* Ajusta o tamanho do botão */
+    padding: 10px 5px; /* Menor padding para caber em telas pequenas */
+  }
+}

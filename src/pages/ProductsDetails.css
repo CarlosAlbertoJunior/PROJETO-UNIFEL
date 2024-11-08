@@ -7,34 +7,75 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.products-details {
+  }
+  
+  .products-details {
     padding-inline: 40px;
-}
-
-.products-details h2 {
+  }
+  
+  .products-details h2 {
     color: #ffffff;
     padding: 15px;
     text-align: center;
     font-size: 25px;
-}
-
-.products-details p {
+  }
+  
+  .products-details p {
     color: rgb(255, 255, 255);
     font-size: 20px;
-}
-
-.products-details-h1 h1 {
+  }
+  
+  .products-details-h1 h1 {
     background-color: rgba(0, 0, 0, 0.322);
     backdrop-filter: blur(10px);
     padding: 10px;
     border: 2px solid rgb(255, 255, 255);
     backdrop-filter: blur(10px);
     color: #fbfdfd;
-}
-
-.products-details-h1 {
+  }
+  
+  .products-details-h1 {
     color: #f0f2f3;
-
-}
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .products-details {
+      padding-inline: 20px; /* Reduz o padding para telas menores */
+    }
+  
+    .products-details h2 {
+      font-size: 22px; /* Reduz o tamanho da fonte do título */
+    }
+  
+    .products-details p {
+      font-size: 18px; /* Reduz o tamanho da fonte do texto */
+    }
+  
+    .button-detalhes-voltar {
+      font-size: 18px; /* Ajusta o tamanho da fonte do botão */
+      padding: 10px; /* Ajusta o padding do botão */
+      margin-inline-end: 10px; /* Reduz a margem lateral */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .products-details {
+      padding-inline: 10px; /* Reduz ainda mais o padding para telas pequenas */
+    }
+  
+    .products-details h2 {
+      font-size: 20px; /* Reduz o tamanho da fonte do título para telas muito pequenas */
+    }
+  
+    .products-details p {
+      font-size: 16px; /* Reduz o tamanho do texto */
+    }
+  
+    .button-detalhes-voltar {
+      font-size: 16px; /* Ajusta ainda mais o tamanho da fonte do botão */
+      padding: 8px; /* Reduz o padding do botão */
+      margin-inline-end: 5px; /* Ajusta a margem lateral */
+    }
+  }
+  
